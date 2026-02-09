@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Generate stats card
         uses: readme-tools/github-readme-stats-action@v1
@@ -24,6 +24,22 @@ jobs:
         with:
           card: stats
           options: username=OrigamiKing3612&show_icons=true&count_private=true&line_height=27&theme=transparent
+          path: profile/origamiking3612-stats.svg
+          token: ${{ secrets.PAT1 }}
+          
+      - name: Generate stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=${{ github.repository_owner }}&theme=transparent&hide=markdown&langs_count=5
+          path: profile/origamiking4723-stats.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate stats card
+        uses: readme-tools/github-readme-stats-action@v1
+        with:
+          card: top-langs
+          options: username=OrigamiKing3612&theme=transparent&hide=markdown&langs_count=5
           path: profile/origamiking3612-stats.svg
           token: ${{ secrets.PAT1 }}
 
