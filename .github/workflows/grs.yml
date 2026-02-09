@@ -31,16 +31,16 @@ jobs:
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=${{ github.repository_owner }}&theme=transparent&hide=markdown&langs_count=5
-          path: profile/origamiking4723-stats.svg
+          options: username=${{ github.repository_owner }}&theme=transparent&count_private=true&hide=markdown&langs_count=5
+          path: profile/origamiking4723-top-langs.svg
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Generate stats card
         uses: readme-tools/github-readme-stats-action@v1
         with:
           card: top-langs
-          options: username=OrigamiKing3612&theme=transparent&hide=markdown&langs_count=5
-          path: profile/origamiking3612-stats.svg
+          options: username=OrigamiKing3612&theme=transparent&count_private=true&hide=markdown&langs_count=5
+          path: profile/origamiking3612-top-langs.svg
           token: ${{ secrets.PAT1 }}
 
       - name: Commit cards
